@@ -42,14 +42,14 @@ public:
 		startYear = a;
 	}
 
-	std::string getFIO() {
+	std::string& getFIO() {
 		return fio;
 	}
 
-	std::string getPos() {
+	std::string& getPos() {
 		return post;
 	}
-	int getSal() {
+	int& getStartYear() {
 		return startYear;
 	}
 };

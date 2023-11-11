@@ -2,7 +2,7 @@
 #include "Worker.h"
 #include <iostream>
 #include <fstream>
-
+#define CurYear 2023
 
 class Keeper {
 
@@ -140,6 +140,40 @@ public:
         }
     }
 
+    void displayByValue() {
+        try {
+            if (getCount() == 0) throw std::exception("Keeper is empty\n");
+
+            int experience = 0;
+            std::cout << "Required experience: ";
+            while (!(std::cin >> experience)) {
+                std::cout << "Trouble maaaann. year: ";
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits <std::streamsize>::max(), '\n');
+                if (std::cin >> experience)
+                    break;
+            }
+            if (experience <= 0) throw std::exception("Year cannot <0 or =0\n");
+
+            std::cout << "\nElements with experience > " << experience << " :" << std::endl;
+
+            int num = 0;
+            for (int i = 1;i < getCount()+1;i++) {                         
+                if ((CurYear - ((*this)[i].getStartYear())) >= experience) {
+                    std::cout << "-------Element # " << num << "-------" << std::endl;
+                    (*this)[i].getData();
+                    num++;
+                }
+            }
+
+            std::cout << "\nCount of Elements with experience = " << experience<< " :   " << num << std::endl << std::endl;
+        }
+        catch (const std::exception& ex) {
+
+            std::cout << ex.what() << '\n';
+        }
+    }
+
     void displayKeep() {
         try {
             if (getCount() == 0) throw std::exception("Keeper is empty\n");
@@ -222,4 +256,3 @@ public:
         in.close();
     }
 };
-

@@ -19,6 +19,7 @@ void MenuWorkerPrint() {
 	std::cout << "4 - Display\n";
 	std::cout << "5 - Save to file\n";
 	std::cout << "6 - Extract from file\n";
+	std::cout << "7 - Display by value\n";
 	std::cout << "0 - Exit\n";
 	std::cout << "Your choice: ";
 	while (!(std::cin >> action)) {
@@ -138,6 +139,14 @@ void MenuWorker() {
 			system("cls");
 
 			keep->fileSetDataKeep();
+
+			system("pause");
+			system("cls");
+			break;
+		case 7:
+			system("cls");
+
+			keep->displayByValue();
 
 			system("pause");
 			system("cls");
