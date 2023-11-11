@@ -2,6 +2,8 @@
 
 #include "Worker.h"
 #include "Keeper.h"
+#include "Stream.h"
+
 
 int action;
 int actionGlobal;
@@ -153,7 +155,10 @@ void MenuWorker() {
 	delete keep;
 }
 
-
+void MenuStream() {
+	Stream* stream = new Stream;
+	stream->withoutComma();
+}
 
 void Menu() {
 	actionGlobal = 1;
@@ -173,7 +178,7 @@ void Menu() {
 		case 2:
 			system("cls");
 
-			
+			MenuStream();
 
 			system("pause");
 			system("cls");
