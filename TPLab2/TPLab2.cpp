@@ -18,10 +18,11 @@
 не содержащие запятых.
 */
 #include <iostream>
-
+#include "Menu.h"
 
 int main()
 {
+    Menu();
  
     return 0;
 }

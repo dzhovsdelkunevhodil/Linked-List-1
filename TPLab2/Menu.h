@@ -92,7 +92,6 @@ void MenuWorker() {
 			break;
 		case 3:
 			system("cls");
-
 			try {
 				if (keep->getCount() == 0) throw std::exception("Keeper is empty\n");
 				val = 0;
@@ -118,6 +117,7 @@ void MenuWorker() {
 			break;
 		case 4:
 			system("cls");
+
 			keep->sortirovka();
 			keep->displayKeep();
 
