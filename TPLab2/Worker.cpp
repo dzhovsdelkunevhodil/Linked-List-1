@@ -32,7 +32,14 @@ void Worker::fileGetData(std::ofstream& out) {
 void Worker::fileSetData(std::ifstream& in) {
 	in >> this->fio;
 	in >> this->post;
-	in >> this->startYear;
+	while (!(in >> this->startYear)) {
+		std::cout << "Trouble maaaann. Enter a number.\n";
+		in.clear();
+		in.ignore(std::numeric_limits <std::streamsize>::max(), '\n');
+		this->startYear = 0;
+		break;
+	}
+	//in >> this->startYear;
 }
 
 void Worker::setData() {
@@ -44,7 +51,14 @@ void Worker::setData() {
 	std::cin >> this->post;
 	std::cout << '\n';
 	std::cout << "sYe: ";
-	std::cin >> this->startYear;
+	while (!(std::cin >> this->startYear)) {
+		std::cout << "Trouble maaaann. Enter a number.\n";
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits <std::streamsize>::max(), '\n');
+		if (std::cin >> this->startYear)
+			break;
+	}
+	//std::cin >> this->startYear;
 	std::cout << '\n';
 }
 
