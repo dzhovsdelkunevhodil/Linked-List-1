@@ -126,6 +126,20 @@ public:
         }
     }
 
+    void sortirovka() {
+
+        for (int i = 1;i < getCount() + 1;++i) {
+            for (int j = 1;j < getCount();++j) {
+
+                if (((*this)[j].getFIO()) < ((*this)[j + 1].getFIO())) {
+
+                    std::swap((*this)[j], (*this)[j + 1]);
+
+                }
+            }
+        }
+    }
+
     void displayKeep() {
         try {
             if (getCount() == 0) throw std::exception("Keeper is empty\n");
