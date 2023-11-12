@@ -165,7 +165,6 @@ public:
                     num++;
                 }
             }
-
             std::cout << "\nCount of Elements with experience = " << experience<< " :   " << num << std::endl << std::endl;
         }
         catch (const std::exception& ex) {
@@ -205,7 +204,6 @@ public:
         std::cout << "\nChange Data\n";
         (*this)[index].setData();
     }
-
 
     void fileDisplayKeep() {
         std::ofstream out;          //

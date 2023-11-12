@@ -24,7 +24,6 @@ void Worker::fileGetData(std::ofstream& out) {
 	out << this->post;
 	out << '\n';
 	out << "sYe: ";
-
 	out << this->startYear;
 	out << '\n';
 }
@@ -39,7 +38,6 @@ void Worker::fileSetData(std::ifstream& in) {
 		this->startYear = 0;
 		break;
 	}
-	//in >> this->startYear;
 }
 
 void Worker::setData() {
@@ -58,7 +56,6 @@ void Worker::setData() {
 		if (std::cin >> this->startYear)
 			break;
 	}
-	//std::cin >> this->startYear;
 	std::cout << '\n';
 }
 

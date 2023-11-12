@@ -4,7 +4,6 @@
 #include "Keeper.h"
 #include "Stream.h"
 
-
 int action;
 int actionGlobal;
 
@@ -30,6 +29,7 @@ void MenuWorkerPrint() {
 			break;
 	}
 }
+
 void MenuPrint() {
 
 	std::cout << "Select command\n";
@@ -45,7 +45,6 @@ void MenuPrint() {
 			break;
 	}
 }
-
 
 void MenuWorker() {
 
@@ -70,6 +69,7 @@ void MenuWorker() {
 			break;
 		case 2:
 			system("cls");
+
 			try {
 				if (keep->getCount() == 0) throw std::exception("Keeper is empty\n");
 				val = 0;
@@ -95,6 +95,7 @@ void MenuWorker() {
 			break;
 		case 3:
 			system("cls");
+
 			try {
 				if (keep->getCount() == 0) throw std::exception("Keeper is empty\n");
 				val = 0;

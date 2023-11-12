@@ -4,8 +4,6 @@
 котора€ считывает текст из файла и выводит на экран только предложени€,
 не содержащие зап€тых.*/
 
-
-
 #include "Stream.h"
 
 Stream::Stream() {
@@ -23,7 +21,6 @@ Stream::Stream() {
 Stream::~Stream() {
     in.close();
 }
-
 
 void Stream::withoutComma() {
 

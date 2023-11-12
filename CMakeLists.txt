@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.21.4)
 
 project(TPLab2)
+
 set(SOURCES
 	TPLab2/TPLab2.cpp
 	TPLab2/Worker.cpp
@@ -13,7 +14,6 @@ set(HEADERS
 	TPLab2/Menu.h
 	TPLab2/Worker.h
 )
-
 
 add_executable(TPLab2 ${SOURCES})
 

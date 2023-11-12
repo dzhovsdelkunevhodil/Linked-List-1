@@ -6,10 +6,11 @@
 
 class Stream {
 private:
+
     std::ifstream in;          
 
-
 public:
+
     Stream();
 
     ~Stream();

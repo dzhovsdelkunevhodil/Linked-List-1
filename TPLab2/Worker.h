@@ -49,6 +49,7 @@ public:
 	std::string& getPos() {
 		return post;
 	}
+
 	int& getStartYear() {
 		return startYear;
 	}
