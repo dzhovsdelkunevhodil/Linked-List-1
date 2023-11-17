@@ -180,7 +180,7 @@ public:
 
             /*for (int i = 1;i < getCount() + 1;i++) {                          //display from 1 to Count //slower
                 std::cout << "-------Element # " << i << "-------" << std::endl;
-                (*this)[i].display();
+                (*this)[i].getData();
             }*/
 
             help = head;                                                        //display from Count to 1 //faster
