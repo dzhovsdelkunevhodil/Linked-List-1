@@ -73,6 +73,8 @@ void MenuWorker() {
 			try {
 				if (keep->getCount() == 0) throw std::exception("Keeper is empty\n");
 				val = 0;
+				std::cout << "If you want to delete last Element(enter -> " << keep->getCount() << ")\n";
+
 				std::cout << "Index of Elemnt to delete: ";
 				while (!(std::cin >> val)) {
 					std::cout << "Trouble maaaann. Index of Elemnt to delete: ";

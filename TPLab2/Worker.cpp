@@ -50,12 +50,14 @@ void Worker::setData() {
 	std::cout << '\n';
 	std::cout << "sYe: ";
 	while (!(std::cin >> this->startYear)) {
-		std::cout << "Trouble maaaann. Enter a number.\n";
+		std::cout << "Trouble maaaann. Enter a number >1950 & <2024.\n";
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits <std::streamsize>::max(), '\n');
 		if (std::cin >> this->startYear)
 			break;
 	}
+	if (((this->startYear) < 1950) || ((this->startYear) > 2024))
+		this->startYear = 0;
 	std::cout << '\n';
 }
 
