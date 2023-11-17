@@ -9,11 +9,11 @@
 *.user
 *.userosscache
 *.sln.docstates
-*.vcxproj
-*.vcxproj.filters
+TPLab2.vcxproj
+TPLab2.vcxproj.filters
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-
+TPLab2.sln
 # Mono auto generated files
 mono_crash.*
 
