@@ -131,7 +131,7 @@ public:
         for (int i = 1;i < getCount() + 1;++i) {
             for (int j = 1;j < getCount();++j) {
 
-                if (((*this)[j].getFIO()) < ((*this)[j + 1].getFIO())) {
+                if (((*this)[j].getFIO()) > ((*this)[j + 1].getFIO())) {
 
                     std::swap((*this)[j], (*this)[j + 1]);
 
@@ -178,12 +178,12 @@ public:
             if (getCount() == 0) throw std::exception("Keeper is empty\n");
             std::cout << "\nAll Elements" << std::endl;
 
-            /*for (int i = 1;i < getCount() + 1;i++) {                          //display from 1 to Count //slower
+            for (int i = 1;i < getCount() + 1;i++) {                          //display from 1 to Count //slower
                 std::cout << "-------Element # " << i << "-------" << std::endl;
                 (*this)[i].getData();
-            }*/
+            }
 
-            help = head;                                                        //display from Count to 1 //faster
+         /*   help = head;                                                        //display from Count to 1 //faster
             int i = getCount();                                                 //because i use keeper as queue (head = #-count Element
             while (help != nullptr && i != 0) {
 
@@ -191,7 +191,7 @@ public:
                 (help->value)->getData();
                 help = help->prev;
                 i--;
-            }
+            }*/
             std::cout << "\nCount of Elements: " << getCount() << std::endl << std::endl;
         }
         catch (const std::exception& ex) {

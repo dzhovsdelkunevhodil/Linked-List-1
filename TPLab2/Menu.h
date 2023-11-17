@@ -63,6 +63,7 @@ void MenuWorker() {
 			worker = new Worker;
 			worker->setData();
 			keep->addElement(worker);
+			keep->sortirovka();
 
 			system("pause");
 			system("cls");
@@ -124,7 +125,7 @@ void MenuWorker() {
 		case 4:
 			system("cls");
 
-			keep->sortirovka();
+			
 			keep->displayKeep();
 
 			system("pause");
