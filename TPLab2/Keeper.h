@@ -155,17 +155,20 @@ public:
             }
             if (experience <= 0) throw std::exception("Year cannot <0 or =0\n");
 
-            std::cout << "\nElements with experience > " << experience << " :" << std::endl;
+            std::cout << "\nElements with experience >= " << experience << " :" << std::endl;
 
             int num = 0;
-            for (int i = 1;i < getCount()+1;i++) {                         
+            for (int i = 1;i < getCount() + 1;i++) {
                 if ((CurYear - ((*this)[i].getStartYear())) >= experience) {
                     std::cout << "-------Element # " << num << "-------" << std::endl;
                     (*this)[i].getData();
                     num++;
                 }
             }
-            std::cout << "\nCount of Elements with experience = " << experience<< " :   " << num << std::endl << std::endl;
+            if (num != 0) 
+                std::cout << "\nCount of Elements with experience >= " << experience << " :   " << num << std::endl << std::endl;
+            else 
+                std::cout << "\nNo Elements with experience >= " << experience << std::endl << std::endl;
         }
         catch (const std::exception& ex) {
 
